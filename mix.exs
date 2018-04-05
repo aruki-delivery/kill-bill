@@ -6,10 +6,10 @@ defmodule KillBill.Mixfile do
       version: "0.1.0",
       language: :erlang,
       deps: deps(Mix.env()),
-      description: "Erlang service discovery and tracking system for clusters",
+      description: "Erlang Web Application Server",
       package: package(),
-      source_url: "https://github.com/aruki-delivery/columbo",
-      homepage_url: "https://hex.pm/packages/columbo"]
+      source_url: "https://github.com/aruki-delivery/kill-bill",
+      homepage_url: "https://hex.pm/packages/kill-bill"]
   end
 
   defp deps(_) do
@@ -25,6 +25,6 @@ defmodule KillBill.Mixfile do
   def package do
     [ maintainers: ["cblage"],
       licenses: ["Apache License 2.0"],
-      links: %{"GitHub" => "https://github.com/aruki-delivery/columbo" } ]
+      links: %{"GitHub" => "https://github.com/aruki-delivery/kill-bill" } ]
   end
 end
