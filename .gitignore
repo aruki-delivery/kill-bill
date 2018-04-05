@@ -1,1 +1,5 @@
 /ebin/
+.idea
+_build
+*.iml
+deps
