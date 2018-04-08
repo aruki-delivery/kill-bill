@@ -4,8 +4,12 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-9bc07eaa15.js
+dist/sidebar_items-0d4fdc45e1.js
 api-reference.html
 search.html
 404.html
+KillBill.html
+KillBill.Application.html
+KillBill.RestSession.html
+KillBill.Session.html
 index.html
