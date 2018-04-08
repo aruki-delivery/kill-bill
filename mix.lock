@@ -7,7 +7,7 @@
   "earmark": {:hex, :earmark, "1.2.5", "4d21980d5d2862a2e13ec3c49ad9ad783ffc7ca5769cf6ff891a4553fbaae761", [:mix], [], "hexpm"},
   "erlydtl": {:hex, :erlydtl, "0.12.1", "3fde3190d30340b10cfcfdb4135a828761d468db4e4b34817c6b91d295f3142d", [:rebar3], [], "hexpm"},
   "ex_doc": {:hex, :ex_doc, "0.18.3", "f4b0e4a2ec6f333dccf761838a4b253d75e11f714b85ae271c9ae361367897b7", [:mix], [{:earmark, "~> 1.1", [hex: :earmark, repo: "hexpm", optional: false]}], "hexpm"},
-  "gibreel": {:hex, :gibreel, "0.1.0", "df4622d7a0ae586363e5fe0e36b2243623f552c699fa441fa59634e264762068", [:mix], [{:async, "~> 0.1.0", [hex: :async, repo: "hexpm", optional: false]}, {:cclock, "~> 0.1.0", [hex: :cclock, repo: "hexpm", optional: false]}, {:columbo, "~> 0.1.0", [hex: :columbo, repo: "hexpm", optional: false]}], "hexpm"},
+  "gibreel": {:hex, :gibreel, "1.0.0", "f66061a879ce1e9c510b155df3104bb5a51a57c174de3a413beeae9aea9d2e1a", [:mix], [{:async, "~> 0.1.0", [hex: :async, repo: "hexpm", optional: false]}, {:cclock, "~> 0.1.0", [hex: :cclock, repo: "hexpm", optional: false]}, {:columbo, "~> 0.1.0", [hex: :columbo, repo: "hexpm", optional: false]}], "hexpm"},
   "jsondoc": {:hex, :jsondoc, "0.7.0", "bbf0803571b007de05ecc80e1d34acb1076d93b1e977262e1cce69e0907c8217", [:mix], [], "hexpm"},
   "narciso": {:hex, :narciso, "0.1.0", "326a63978f31d949afffb7eac7691dc115558046ab72375f82cfd88f35503e0c", [:mix], [], "hexpm"},
   "ranch": {:hex, :ranch, "1.4.0", "10272f95da79340fa7e8774ba7930b901713d272905d0012b06ca6d994f8826b", [:rebar3], [], "hexpm"},

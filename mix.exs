@@ -3,8 +3,7 @@ defmodule KillBill.Mixfile do
 
   def project do
     [app: :kill_bill,
-      version: "0.1.0",
-      language: :erlang,
+      version: "1.0.0",
       deps: deps(Mix.env()),
       description: "Erlang Web Application Server",
       package: package(),
@@ -17,7 +16,6 @@ defmodule KillBill.Mixfile do
       {:erlydtl, ">= 0.0.0"},
       {:columbo, "~> 0.1.0"},
       {:jsondoc, "~> 0.7.0"},
-      {:gibreel, "~> 0.1.0"},
       {:narciso, "~> 0.1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}]
   end
