@@ -3,11 +3,11 @@ defmodule KillBill.Application do
     require Logger
 
     def start(type, args) do
-        Logger.info("Starting KillBill.Application.start(#{inspect type}}, #{inspect args})...")
+        Logger.info("#{__MODULE__}.start(#{inspect type}}, #{inspect args})...")
         {:ok, killbill_sup} = Supervisor.start_link([KillBill], [strategy: :one_for_one, name: KillBill.Application.Supervisor])
-        Logger.info("started KillBill.Gibreel.Supervisor - #{inspect killbill_sup}")
+        Logger.info("#{__MODULE__} started KillBill - #{inspect killbill_sup}")
 
-        children = [           
+        children = [
             %{
                 id: KillBill.Session,
                 start: {KillBill.Session, :start_link, [[{:get_value_function, :none}, {:max_age, 3600}, {:purge_interval, 8600}, {:cluster_nodes, :all}]]}
@@ -16,7 +16,7 @@ defmodule KillBill.Application do
         config = args[:default_webapp_config]
         port = args[:default_rest_port]
         
-        Logger.info("Starting kill_bill on default port: #{port}")
+        Logger.info("Starting KillBill.Session on default port: #{port}")
         server_config = {
           :server_config,
           :default,
@@ -31,6 +31,7 @@ defmodule KillBill.Application do
         :ok = :kill_bill.deploy(server, config)
 
         {:ok, super_pid} = Supervisor.start_link(children, [strategy: :one_for_one, name: KillBill.Endpoint.Supervisor])
+        Logger.info("#{__MODULE__} started KillBill.Session - #{inspect killbill_sup}")
         {:ok, super_pid}
     end
   end
