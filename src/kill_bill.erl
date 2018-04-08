@@ -312,22 +312,11 @@ get_resource_server(ResourceConfig) ->
 stop_resource_server(none) -> ok;
 stop_resource_server(Pid) -> kb_resource:stop(Pid).
 
-create_session(WebAppName, WebAppConfig) ->
-	case proplists:get_value(session_timeout, WebAppConfig, 30) of
-		none -> none;
-		SessionTimeout  ->
-			SessionCache = list_to_atom(atom_to_list(WebAppName) ++ "_session"),
-			Options = [{max_age, SessionTimeout * 60},
-					{purge_interval, 60},
-					{cluster_nodes, all},
-					{sync_mode, full}],
-			'Elixir.Gibreel':create_cache(SessionCache, Options),
-			SessionCache
-	end.
+create_session(WebAppName, _WebAppConfig) ->
+	list_to_atom(atom_to_list(WebAppName) ++ "_session").
 
 stop_session(none) -> ok;
-stop_session(SessionCache) ->
-	'Elixir.Gibreel':delete_cache(SessionCache).
+stop_session(_SessionCache) -> ok.
 
 get_server_paths(ServerName, Host, Server, Webapps) ->
 	case Server#server.webapps of 

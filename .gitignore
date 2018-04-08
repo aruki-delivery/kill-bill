@@ -3,3 +3,4 @@
 _build
 *.iml
 deps
+.vs
