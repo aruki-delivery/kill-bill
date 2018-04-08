@@ -321,13 +321,13 @@ create_session(WebAppName, WebAppConfig) ->
 					{purge_interval, 60},
 					{cluster_nodes, all},
 					{sync_mode, full}],
-			gibreel:create_cache(SessionCache, Options),
+			'Gibreel':create_cache(SessionCache, Options),
 			SessionCache
 	end.
 
 stop_session(none) -> ok;
 stop_session(SessionCache) ->
-	gibreel:delete_cache(SessionCache).
+	'Gibreel':delete_cache(SessionCache).
 
 get_server_paths(ServerName, Host, Server, Webapps) ->
 	case Server#server.webapps of 

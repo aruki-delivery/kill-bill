@@ -14,6 +14,7 @@ defmodule KillBill.Mixfile do
   defp deps(_) do
     [{:cowboy, "~> 1.0.3"},
       {:erlydtl, ">= 0.0.0"},
+      {:gibreel, "~> 1.0"},
       {:columbo, "~> 0.1.0"},
       {:jsondoc, "~> 0.7.0"},
       {:narciso, "~> 0.1.0"},
