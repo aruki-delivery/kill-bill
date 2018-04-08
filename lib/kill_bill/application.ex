@@ -29,10 +29,8 @@ defmodule KillBill.Application do
         
         Logger.info("Deploying server #{inspect server} with config #{inspect config})...")
         :ok = :kill_bill.deploy(server, config)
-    
-        Logger.info("Starting kill_bill server(#{inspect server})...")
-        :ok = :kill_bill.start_server(server)
 
-        Supervisor.start_link(children, [strategy: :one_for_one, name: KillBill.Endpoint.Supervisor])
+        {:ok, super_pid} = Supervisor.start_link(children, [strategy: :one_for_one, name: KillBill.Endpoint.Supervisor])
+        {:ok, super_pid}
     end
   end
