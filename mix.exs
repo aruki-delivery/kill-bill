@@ -3,7 +3,7 @@ defmodule KillBill.Mixfile do
 
   def project do
     [app: :kill_bill,
-      version: "4.0.0",
+      version: "4.0.1",
       deps: deps(Mix.env()),
       description: "Erlang Web Application Server",
       package: package(),
