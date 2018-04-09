@@ -10,7 +10,7 @@ defmodule KillBill.Session do
 
     def init(sessions) do
       Logger.info("#{__MODULE__}.init(#{inspect sessions})...")
-      sessions = Gibreel.create_cache(:kb_default_sessions,  [
+      sessions = :gibreel.create_cache(:kb_default_sessions,  [
         {:get_value_function, :none},
         {:max_age, 3600},
         {:purge_interval, 8600},

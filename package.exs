@@ -1,7 +1,7 @@
 Expm.Package.new(
   name: "kill_bill",
   description: "Web Application Server",
-  version: "3.0.0",
+  version: "4.0.0",
   keywords: ["elixir", "erlang", "web", "application", "server"],
   licenses: [[name: "Apache License 2.0"]],
   maintainers: [
