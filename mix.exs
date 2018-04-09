@@ -29,7 +29,7 @@ defmodule KillBill.Mixfile do
     [{:cowboy, "~> 1.0.3"},
       {:erlydtl, ">= 0.0.0"},
       {:gibreel, "~> 4.0"},
-      {:columbo, "~> 0.1.0"},
+      {:columbo, "~> 1.0"},
       {:jsondoc, "~> 0.7.0"},
       {:narciso, "~> 0.1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}]
