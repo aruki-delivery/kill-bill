@@ -3,7 +3,7 @@ defmodule KillBill.Mixfile do
 
   def project do
     [app: :kill_bill,
-      version: "4.0.1",
+      version: "6.0.0",
       deps: deps(Mix.env()),
       description: "Erlang Web Application Server",
       package: package(),
@@ -11,25 +11,11 @@ defmodule KillBill.Mixfile do
       homepage_url: "https://hex.pm/packages/kill-bill"]
   end
 
-  def application do
-    [mod: {KillBill.Application, [
-      default_rest_port: 6666,
-      default_webapp_config: {:webapp_config, :killme, [
-        {:context, '/api'},
-        {:action, [
-            {'session', 'Elixir.KillBill.RestSession'},
-        ]}
-      ]}
-    ]},
-    extra_applications: [:logger, :columbo],]
-  end
-
-
   defp deps(_) do
     [{:cowboy, "~> 1.0.3"},
       {:erlydtl, ">= 0.0.0"},
-      {:gibreel, "~> 4.0"},
-      {:columbo, "~> 1.0"},
+      {:gibreel, "~> 6.0"},
+      {:columbo, "~> 2.0"},
       {:jsondoc, "~> 0.7.0"},
       {:narciso, "~> 0.1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}]
